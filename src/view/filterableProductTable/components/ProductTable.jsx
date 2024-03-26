@@ -6,8 +6,8 @@ export default function ProductTable({ products, filterText, inStockOnly }) {
       {products
         .filter(
           (item) =>
-            (item.name).toLowerCase().includes(filterText.toLowerCase()) &&
-            (inStockOnly ? item.stocked : true)
+            (item.name).toLowerCase().includes(filterText.toLowerCase()) && // 搜索词
+            (inStockOnly ? item.stocked : true) // 是否显示有库存
         )
         .map((item, index) => {
           return (
