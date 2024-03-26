@@ -2,7 +2,7 @@ import { createBrowserRouter, createHashRouter,Link } from "react-router-dom";
 
 import Root from "../view/app/index.jsx";
 import FilterableProductTable from "../view/filterableProductTable/index.jsx";
-
+import Assets from '../view/assets_public/index.jsx'
 // createHashRouter or createBrowserRouter
 export const router = createHashRouter([
   {
@@ -18,11 +18,15 @@ export const router = createHashRouter([
         ),
       },
       {
+        path: "assets",
+        element: <Assets />,
+      },
+      {
         path: "filterableProductTable",
         element: <FilterableProductTable />,
       },
     ],
-  },
+  }
 
   // {
   //   path: "about",
