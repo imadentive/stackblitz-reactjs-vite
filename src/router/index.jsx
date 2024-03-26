@@ -1,9 +1,10 @@
-import { createBrowserRouter, Link } from "react-router-dom";
+import { createBrowserRouter, createHashRouter,Link } from "react-router-dom";
 
 import Root from "../view/app/index.jsx";
 import FilterableProductTable from "../view/filterableProductTable/index.jsx";
 
-export const router = createBrowserRouter([
+// createHashRouter or createBrowserRouter
+export const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
