@@ -1,8 +1,8 @@
-import { createBrowserRouter, createHashRouter,Link } from "react-router-dom";
-
+import { createBrowserRouter, createHashRouter, Link } from "react-router-dom";
+import { Button, Space } from 'antd-mobile'
 import Root from "../view/app/index.jsx";
 import FilterableProductTable from "../view/filterableProductTable/index.jsx";
-import Assets from '../view/assets_public/index.jsx'
+import Assets from "../view/assets_public/index.jsx";
 // createHashRouter or createBrowserRouter
 export const router = createHashRouter([
   {
@@ -12,9 +12,19 @@ export const router = createHashRouter([
       {
         index: true,
         element: (
-          <div>
-            <h1>Hello World</h1>
-          </div>
+          <Space wrap>
+            <Button
+              onClick={() => {
+                alert("hello.");
+              }}
+            >
+              Default
+            </Button>
+            <Button color="primary">Primary</Button>
+            <Button color="success">Success</Button>
+            <Button color="danger">Danger</Button>
+            <Button color="warning">Warning</Button>
+          </Space>
         ),
       },
       {
@@ -26,7 +36,7 @@ export const router = createHashRouter([
         element: <FilterableProductTable />,
       },
     ],
-  }
+  },
 
   // {
   //   path: "about",
