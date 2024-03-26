@@ -1,8 +1,11 @@
-export default function ProductRow()
+export default function ProductRow({product})
 {
     return (
         <div>
-           ProductRow
+           {
+            product.stocked ? product.name: <span style={{color:'red'}}>{product.name}</span>
+           }
+            <span style={{color:'blue',marginLeft:'10px'}}>{product.price}</span>
         </div>
     );
 }

@@ -1,8 +1,8 @@
-export default function ProductCategoryRow()
+export default function ProductCategoryRow({name})
 {
     return (
-        <div>
-            ProductCategoryRow
+        <div style={{fontSize:'30px'}}>
+            {name}
         </div>
     );
 }
