@@ -12,10 +12,10 @@ export default function ProductTable({ products, filterText, inStockOnly }) {
     .map((item, index) => {
       if(!existCateNames.includes(item.category)){
         existCateNames.push(item.category)
-        rows.push(<ProductCategoryRow name={item.category} />)
+        rows.push(<ProductCategoryRow name={item.category} key={index+'key1'} />)
       }
 
-      rows.push(<ProductRow product={item} />)
+      rows.push(<ProductRow product={item} key={index+'key2'}   />)
 
     });
 
