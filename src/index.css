@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+
 body{
   padding: 10px;
+}
+a{
+  padding: 0 4px;
 }

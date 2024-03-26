@@ -1,28 +1,35 @@
 import { createBrowserRouter, Link } from "react-router-dom";
 
-import App from "../view/app/index.jsx";
+import Root from "../view/app/index.jsx";
+import FilterableProductTable from "../view/filterableProductTable/index.jsx";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Root />,
+    children: [
+      {
+        index: true,
+        element: (
+          <div>
+            <h1>Hello World</h1>
+          </div>
+        ),
+      },
+      {
+        path: "filterableProductTable",
+        element: <FilterableProductTable />,
+      },
+    ],
   },
-  {
-    path: "hello",
-    element: (
-      <div>
-        <h1>Hello World</h1>
-        <Link to="/">Home</Link>
-      </div>
-    ),
-  },
-  {
-    path: "about",
-    element: (
-      <>
-        <div>About</div>
-        <Link to="/">Home</Link>
-      </>
-    ),
-  },
+
+  // {
+  //   path: "about",
+  //   element: (
+  //     <>
+  //       <div>About</div>
+  //       <Link to="/">Home</Link>
+  //     </>
+  //   ),
+  // },
 ]);
