@@ -1,13 +1,13 @@
-import { createBrowserRouter, createHashRouter, Link } from "react-router-dom";
+import { Link, createBrowserRouter, createHashRouter } from 'react-router-dom'
 import { Button, Space } from 'antd-mobile'
-import Layout from "../views/Layout/index.jsx";
-import FilterableProductTable from "../views/filterableProductTable/index.jsx";
-import Assets from "../views/assets_public/index.jsx";
-import Demo from "../views/Demo/index.jsx";
+import Layout from '../views/Layout/index.jsx'
+import FilterableProductTable from '../views/filterableProductTable/index.jsx'
+import Assets from '../views/assets_public/index.jsx'
+import Demo from '../views/Demo/index.jsx'
 // createHashRouter or createBrowserRouter
 export const router = createHashRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     children: [
       {
@@ -16,7 +16,7 @@ export const router = createHashRouter([
           <Space wrap>
             <Button
               onClick={() => {
-                alert("hello.");
+                alert('hello.')
               }}
             >
               Default
@@ -29,16 +29,17 @@ export const router = createHashRouter([
         ),
       },
       {
-        path: "assets",
+        path: 'assets',
         element: <Assets />,
+
       },
       {
-        path: "filterableProductTable",
+        path: 'filterableProductTable',
         element: <FilterableProductTable />,
       },
       {
-        path: "demo",
-        element: <Demo person={{name:'hello'}} size={300} />,
+        path: 'demo',
+        element: <Demo person={{ name: 'hello' }} size={300} />,
       },
     ],
   },
@@ -52,4 +53,4 @@ export const router = createHashRouter([
   //     </>
   //   ),
   // },
-]);
+])
